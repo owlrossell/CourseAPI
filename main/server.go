@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	err := mgm.SetDefaultConfig(nil, "EDteam", options.Client().ApplyURI("mongodb+srv://user_cluster:Rykly2017@micluster.hwvlc.mongodb.net"))
+	err := mgm.SetDefaultConfig(nil, "EDteam", options.Client().ApplyURI("mongodb+srv://user_cluster:cpskoPPATEwrfuLQ@micluster.hwvlc.mongodb.net"))
 	if err != nil {
 		fmt.Println("Error on connect")
 	}
@@ -21,7 +21,7 @@ func main() {
 	e.GET("/course/:id", getOneCourse)
 	e.DELETE("/course/:id", deleteCourse)
 	e.PUT("/course/:id", updateCourse)
-	e.POST("/courses", saveCourse)
+	e.POST("/course", saveCourse)
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
